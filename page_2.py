@@ -22,7 +22,7 @@ if not all_data:
 else:
     pass
 for i in list_of_files:
-    df=bt.feeds.PandasData(dataname=pd.read_csv(f'300stock_price\\\\{i}', index_col=0, parse_dates=True))
+    df=bt.feeds.PandasData(dataname=pd.read_csv(f'300stock_price/{i}', index_col=0, parse_dates=True))
     cerebro.adddata(df,name=i.split('.')[0])
 
 option=st.selectbox('factor',options=['Alpha12','Alpha23'],index=0)
@@ -96,3 +96,4 @@ with st.spinner("Running backtest...",show_time=True):
     plt.xlabel("Time")
     plt.ylabel("Cumulative Return")
     st.pyplot(plt)
+
