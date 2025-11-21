@@ -4,8 +4,8 @@ import streamlit as st
 pages={
     "applications":[
         st.Page('main.py',title='Main Page',icon='🏠'),
-        st.Page('page_1.py',title='Backtest Web',icon='📈'),
-        st.Page('page_2.py',title='Page 2',icon='📄'),
+        st.Page('page_1.py',title='Stock price',icon='📈'),
+        st.Page('page_2.py',title='factor backtest',icon='📄'),
     ],
     "redo":[
         st.Page('paper.py')
